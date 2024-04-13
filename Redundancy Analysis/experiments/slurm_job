@@ -1,0 +1,55 @@
+#!/bin/bash
+#add #SBATCH statement requesting resources
+
+TASK=$1 #defdet or clonedet or codesearch 
+
+RESULTS_DIR="./Results/${TASK}"
+MODEL=$2
+
+if [ "$MODEL" = "CodeBERT" ]; then
+
+          CONFIG="configs/config_${TASK}_codebert.json"
+          OUTPUT_DIR="$RESULTS_DIR/CodeBERT/pooled"
+
+elif [ "$MODEL" = "GraphCodeBERT" ]; then
+
+          CONFIG="configs/config_${TASK}_graphcodebert.json"
+          OUTPUT_DIR="$RESULTS_DIR/GraphCodeBERT/pooled"
+
+
+elif [ "$MODEL" = "UniXCoder" ]; then
+
+          CONFIG="configs/config_${TASK}_unixcoder.json"
+          OUTPUT_DIR="$RESULTS_DIR/UniXCoder/pooled"
+
+
+elif [ "$MODEL" = "RoBERTa" ]; then
+
+          CONFIG="configs/config_${TASK}_roberta.json"
+          OUTPUT_DIR="$RESULTS_DIR/RoBERTa/pooled"
+
+elif [ "$MODEL" = "BERT" ]; then
+
+          CONFIG="configs/config_${TASK}_bert.json"
+          OUTPUT_DIR="$RESULTS_DIR/BERT/pooled"
+
+
+elif [ "$MODEL" = "CodeGPT-java" ]; then
+
+          CONFIG="configs/config_${TASK}_codegptj.json"
+          OUTPUT_DIR="$RESULTS_DIR/CodeGPT/java-original/pooled"
+
+
+elif [ "$MODEL" = "CodeGPT-python" ]; then
+
+          CONFIG="configs/config_${TASK}_codegptp.json"
+          OUTPUT_DIR="$RESULTS_DIR/CodeGPT/python-original/pooled"
+
+fi
+
+module load ml-gpu
+
+
+ml-gpu /work/LAS/jannesar-lab/arushi/Environments/aux_classifier_env/bin/python run_sentence_pipeline_all.py --config $CONFIG > ${OUTPUT_DIR}/sentence_pipeline_all
+ml-gpu /work/LAS/jannesar-lab/arushi/Environments/aux_classifier_env/bin/python run_sentence_cc_all.py --config $CONFIG > ${OUTPUT_DIR}/sentence_cc_all
+ml-gpu /work/LAS/jannesar-lab/arushi/Environments/aux_classifier_env/bin/python run_sentence_max_features.py --config $CONFIG > ${OUTPUT_DIR}/sentence_max_features
