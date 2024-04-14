@@ -1,6 +1,6 @@
 # Discovering Latent Concepts in CodeBERT
 
-This project is a replication of ConceptX. For the original implementation and more details, visit the [ConceptX repository](https://github.com/hsajjad/ConceptX) on GitHub.
+To replicate the clustering experiments, visit the [ConceptX repository](https://github.com/hsajjad/ConceptX) on GitHub.
 
 We include the original clusters generated using ConceptX in 
 
