@@ -46,7 +46,28 @@ Generates oracle numbers and performance numbers at all correlation clustering t
 
 ## Part 2: Redundancy and Concept Analysis for Token Tagging Task (RQ3)
 
-## Part 3: CodeConceptNet Dataset (RQ4)
-  
+## Getting the data
+1. Raw code: Deduplicated Java code in [https://github.com/dashends/CodeSyntax](https://github.com/dashends/CodeSyntax).
+2. Preprocess the code and generate labels: Run ./Rundancy Analysis/Token Tagging/Preprocessing.py
+The processed tokens and labels are in the folder: ./Rundancy Analysis/Token Tagging/src_java
 
+### Performing experiments
+Run `run_neurox1.py` in folder `./Rundancy Analysis/Token Tagging/` with the param extract=False if you have already
+had the activation files. If not, make extract=True
+
+You may want to save the output to a log file for future analysis.
+
+### Get the important neurons to properties of code:
+Examine the log file of the token tagging task, the important neurons to properties of code can be found 
+based on the top words of neurons.
+
+### Get the activated words of neurons:
+After examining the top words, you have the indices and the words, then run the script 
+`./Rundancy Analysis/Token Tagging/TracingConcept.py` with the token and neuron indices.
+
+### CKA
+For all the tasks, run `./Rundancy Analysis/Token Tagging/CKA/cka.py`
+
+
+## Part 3: CodeConceptNet Dataset (RQ4)
 
