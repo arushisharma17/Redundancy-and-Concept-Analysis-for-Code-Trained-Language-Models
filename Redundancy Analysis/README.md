@@ -4,24 +4,6 @@ This repository contains the code for the paper "Redundancy and Concept Analysis
 
 ##Results
 
-### Tasks:
-The Results directory contains the outputs for the following tasks:
-
-- [ ] [Defect Detection](https://git.las.iastate.edu/arushi17/interpretability-of-source-code-transformers/-/tree/HPC_task/experiments/classification/Results/defdet?ref_type=heads) : We use the Defect Detection data set Devign \citep{zhou2019devign} as it is a popular program understanding task within the CodeXGLUE benchmark. The Defect Detection task predicts whether a given code snippet is secure or insecure with vulnerabilities to resource leaks and DoS attacks or use-after-free vulnerabilities. The data set was manually labelled by cybersecurity experts and contains functions collected from C programming language.
-
-- [ ] [Clone Detection](https://git.las.iastate.edu/arushi17/interpretability-of-source-code-transformers/-/tree/HPC_task/experiments/classification/Results/clonedet?ref_type=heads): Clone Detection is a binary classification task where the probability of being true clones is calculated using cosine similarity between the mean vectors of the last hidden states for two code snippets. We use the BigCloneBench The original dataset comprised of 901028 training samples and 415416 dev samples. We found that the dataset was highly imbalanced. Therefore, for finetuning our models, we perform stratified sampling and use approximately 10\% data from the training and dev sets to obtain a balanced dataset. 
-
-- [ ] [NL Code Search](https://git.las.iastate.edu/arushi17/interpretability-of-source-code-transformers/-/tree/HPC_task/experiments/classification/Results/codesearch?ref_type=heads) :NL-Code Search is also formulated as a binary classification task to predict whether a given natural language description describes a code snippet correctly. We first finetune the models on the Code Search (AdvTest) dataset obtained from CodesearchNetconsisting of251,820 train and 9,604 validation samples and then on the 20,000 training samples and 604 validation samples of the CoSQA dataset.
-
-- [ ] [OpenMP Parallelism Detection](https://git.las.iastate.edu/arushi17/interpretability-of-source-code-transformers/-/tree/HPC_task/experiments/classification/Results/openmp?ref_type=heads) : The OMP4Par dataset is an open-source benchmark composed
-of data from three resources: code crawled from GitHub, OpenMP benchmarks
-such as Nas Parallel Benchmarks and Rodinia, and synthetic code. This
-dataset contains loops with labels indicating whether a loop is parallel or not. 
-
-# Neuron Activations Dataset Statistics
-
-Below is the table of dataset statistics for neuron activations, detailing the distribution of data across training (Train), development (Dev), and test sets, along with the number of tags for each task.
-
 # Neuron Activations Dataset Statistics
 
 Below is a summary of the dataset statistics for neuron activations, showcasing the distribution across training, development, and test sets, along with the number of tags for each task.
