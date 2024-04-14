@@ -48,12 +48,12 @@ Generates oracle numbers and performance numbers at all correlation clustering t
 
 ## Getting the data
 1. Raw code: Deduplicated Java code in [https://github.com/dashends/CodeSyntax](https://github.com/dashends/CodeSyntax).
-2. Preprocess the code and generate labels: Run ./Rundancy Analysis/Token Tagging/Preprocessing.py
-The processed tokens and labels are in the folder: ./Rundancy Analysis/Token Tagging/src_java
+2. Preprocess the code and generate labels: Run `./Rundancy Analysis/Token Tagging/Preprocessing.py`
+The processed tokens and labels are in the folder: `./Rundancy Analysis/Token Tagging/src_java`
 
 ### Performing experiments
-Run `run_neurox1.py` in folder `./Rundancy Analysis/Token Tagging/` with the param extract=False if you have already
-had the activation files. If not, make extract=True
+Run `run_neurox1.py` in folder `./Rundancy Analysis/Token Tagging/` with the param `extract=False` if you have already
+had the activation files. If not, make `extract=True`
 
 You may want to save the output to a log file for future analysis.
 
