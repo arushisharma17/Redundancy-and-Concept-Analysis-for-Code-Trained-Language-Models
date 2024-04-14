@@ -1,14 +1,16 @@
 # Redundancy and Concept Analysis for Code-trained Language Models
 This repository contains the code for the paper Redundancy and Concept Analysis for Code-trained Language Models
 
-## Getting the Data
+## Part 1: Redundancy Analysis for Downstream Tasks (RQ 1 and RQ2)
+
+### Getting the Data
 
 - **Defect Detection**: [https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection)
 - **Clone Detection**: [https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench)
 - **NL-Code Search**: [https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery)
 
 
-## Getting neuron activations
+### Getting neuron activations
 
 Below is a summary of the dataset statistics for neuron activations, showcasing the distribution across training, development, and test sets, along with the number of tags for each task.
 
@@ -21,7 +23,7 @@ Below is a summary of the dataset statistics for neuron activations, showcasing 
 
 
 
-## Getting activations
+### Getting activations
 `cd ./Redundancy Analysis`
 
 Each task directory contains the code for two steps:
@@ -30,7 +32,7 @@ Each task directory contains the code for two steps:
 
 cd into the task directory to get specific instructions for that task.
 
-## Performing experiments
+### Performing experiments
 There are three main helper scripts provided: 
 
 1. `experiments/classification/run_sentence_pipeline_all.py`
@@ -41,6 +43,10 @@ Generates oracle numbers and performance numbers at all correlation clustering t
 
 3. `experiments/classification/run_sentence_max_features.py`
    Produces oracle numbers and identifies the minimal set of neurons from all neurons for accuracies.
+
+## Part 2: Redundancy and Concept Analysis for Token Tagging Task (RQ3)
+
+## Part 3: CodeConceptNet Dataset (RQ4)
   
 
 
