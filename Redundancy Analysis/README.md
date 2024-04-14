@@ -2,9 +2,17 @@
 
 This repository contains the code for the paper "Redundancy and Concept Analysis of Code-trained language models"
 
-##Results
+https://github.com/fdalvi/analyzing-redundancy-in-pretrained-transformer-models 
 
-# Neuron Activations Dataset Statistics
+## Getting the Data
+
+- **Defect Detection**: [https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Defect-detection)
+- **Clone Detection**: [https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench](https://github.com/microsoft/CodeXGLUE/tree/main/Code-Code/Clone-detection-BigCloneBench)
+- **NL-Code Search**: [https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery)
+
+
+## Getting neuron activations
+
 
 Below is a summary of the dataset statistics for neuron activations, showcasing the distribution across training, development, and test sets, along with the number of tags for each task.
 
@@ -17,7 +25,11 @@ Below is a summary of the dataset statistics for neuron activations, showcasing 
 
 
 
-## Getting started
+## Getting activations
+
+## Performing experiments
+
+Navigate to the experiments directory using `cd experiments`.
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
