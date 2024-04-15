@@ -98,7 +98,7 @@ Once you have obtained the clustering output file, which is expected to be in th
 
 ### Annotation
 
-Change required paths at the bottom of `AnnotationToolGUI.py`. 
+Change required paths and run `AnnotationToolGUI.py`. 
 
 
 
