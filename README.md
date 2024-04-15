@@ -2,6 +2,7 @@
 This repository contains the code for the paper Redundancy and Concept Analysis for Code-trained Language Models
 
 ## Part 1: Redundancy Analysis for Downstream Tasks (RQ 1 and RQ2)
+There are two types of tasks: Sequence Labeling Task - Token Tagging and Sequence Classification Tasks - Defect Detection, Clone Detection and Code Search. 
 
 ### Getting the Data
 
