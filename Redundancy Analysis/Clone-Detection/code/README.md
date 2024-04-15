@@ -13,14 +13,11 @@ mkdir CodeBERT GraphCodeBERT UniXCoder RoBERTa BERT CodeGPT-java CodeGPT-python
 ## Running Scripts
 
 To run fine-tuning or extraction processes, use the following command:
-`sbatch extraction1.sh <dataset-train,dev,test> <task-extract,finetune> <model>`
-Example: `sbatch extraction1.sh train extract GraphCodeBERT`. 
+`sbatch extraction.sh <dataset(train,dev,test)> <task(extract,finetune)> <model>`
+Example: `sbatch extraction.sh train extract GraphCodeBERT`. 
 
 
 All model settings are provided within the script.
-
-
-
 
 
 Notes:
