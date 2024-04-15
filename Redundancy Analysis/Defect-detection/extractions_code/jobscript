@@ -7,9 +7,9 @@
 #SBATCH --gres=gpu:1
 
 module load ml-gpu
-cd /work/LAS/jannesar-lab/arushi/Redundancy/Defect-detection/code
+cd 
 
-CUDA_LAUNCH_BLOCKING=1 ml-gpu /work/LAS/jannesar-lab/arushi/Environments/finetuning_env/bin/python run_extraction.py \
+CUDA_LAUNCH_BLOCKING=1 python run_extraction.py \
     --output_file=dev_activations.json \
     --model_type=auto \
     --config_name=mrm8488/codebert-base-finetuned-detect-insecure-code \
