@@ -4,9 +4,11 @@
 
 First, create a base directory for saved models and then create individual directories for each model:
 
+```
 mkdir saved\_models
 cd saved\_models
-mkdir CodeBERT GraphCodeBERT UniXCoder RoBERTa BERT CodeGPT-java CodeGPT-python 
+mkdir CodeBERT GraphCodeBERT UniXCoder RoBERTa BERT CodeGPT-java CodeGPT-python
+```
 
 ## Running Scripts
 
