@@ -27,7 +27,12 @@ Below is a summary of the dataset statistics for neuron activations, showcasing 
 ### Getting activations
 
 Create the environment: 
-`pip install -r finetuning_requirements.txt`
+
+```
+python -m venv finetuning_env
+cd finetuning_env
+pip install -r finetuning_requirements.txt
+```
 
 `cd ./Redundancy Analysis`
 
@@ -80,9 +85,29 @@ For running CKA for all the tasks, run `./Redundancy Analysis/Token Tagging/CKA/
 
 ## Part 3: CodeConceptNet Dataset (RQ4)
 
-`cd CodeConceptNet`
-Follow instructions for step 1 Get Concept Clusters at https://github.com/hsajjad/ConceptX
-After the clustering output file is generated in the format Word|||WordID|||SentID|||TokenID|||ClusterID, run `gpt4labeling.py` to convert to JSON format and generate labels using GPT4. 
+## Accessing CodeConceptNet
+
+To begin working with the CodeConceptNet, navigate to the appropriate directory: `cd CodeCOnceptNet`
+
+
+### Step 1: Get Concept Clusters
+
+Follow the instructions provided to obtain concept clusters from ConceptX. You can find the necessary steps at the [ConceptX GitHub repository](https://github.com/hsajjad/ConceptX).
+
+### Post-Clustering Process
+
+Once you have obtained the clustering output file, which is expected to be in the format `Word|||WordID|||SentID|||TokenID|||ClusterID`, proceed with the following steps:
+
+1. **Convert to JSON Format**: Run the `gpt4labeling.py` script to convert the output to JSON format. This step prepares the data for further processing.
+
+2. **Generate Labels**: Utilize GPT-4 to generate labels for the JSON-formatted data. This enhances the data with machine learning-generated insights.
+
+### File Path Example
+
+For reference, here is an example of a file path used in redundancy analysis and token tagging for Java source code:
+
+
+
 
 
 
