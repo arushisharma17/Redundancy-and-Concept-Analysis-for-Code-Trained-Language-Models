@@ -96,16 +96,7 @@ Follow the instructions provided to obtain concept clusters from ConceptX. You c
 
 ### Post-Clustering Process
 
-Once you have obtained the clustering output file, which is expected to be in the format `Word|||WordID|||SentID|||TokenID|||ClusterID`, proceed with the following steps:
-
-1. **Convert to JSON Format**: Run the `gpt4labeling.py` script to convert the output to JSON format. This step prepares the data for further processing.
-
-2. **Generate Labels**: Utilize GPT-4 to generate labels for the JSON-formatted data. This enhances the data with machine learning-generated insights.
-
-### File Path Example
-
-For reference, here is an example of a file path used in redundancy analysis and token tagging for Java source code:
-
+Once you have obtained the clustering output file, which is expected to be in the format `Word|||WordID|||SentID|||TokenID|||ClusterID`, run `gpt4labeling.py` to convert to JSON format and generate labels using GPT4. 
 
 
 
