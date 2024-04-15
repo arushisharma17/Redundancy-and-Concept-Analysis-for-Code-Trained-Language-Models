@@ -82,6 +82,7 @@ For running CKA for all the tasks, run `./Redundancy Analysis/Token Tagging/CKA/
 
 `cd CodeConceptNet`
 Follow instructions for step 1 Get Concept Clusters at https://github.com/hsajjad/ConceptX
-After the clustering output file is generated in the format Word|||WordID|||SentID|||TokenID|||ClusterID
+After the clustering output file is generated in the format Word|||WordID|||SentID|||TokenID|||ClusterID, run `gpt4labeling.py` to convert to JSON format and generate labels using GPT4. 
+
 
 
