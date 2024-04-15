@@ -32,8 +32,8 @@ Create the environment:
 `cd ./Redundancy Analysis`
 
 Each task directory contains the code for two steps:
-1. Finetuning 
-2. Extraction 
+1. Finetuning the models
+2. Extracting the neuron activations
 
 cd into the task directory to get specific instructions for that task.
 
@@ -57,11 +57,11 @@ Generates oracle numbers and performance numbers at all correlation clustering t
 
 ## Getting the data
 1. Raw code: Deduplicated Java code in [https://github.com/dashends/CodeSyntax](https://github.com/dashends/CodeSyntax).
-2. Preprocess the code and generate labels: Run `./Reundancy Analysis/Token Tagging/Preprocessing.py`
-The processed tokens and labels are in the folder: `./Reundancy Analysis/Token Tagging/src_java`
+2. Preprocess the code and generate labels: Run `./Redundancy Analysis/Token Tagging/Preprocessing.py`
+The processed tokens and labels are provided in the folder: `./Redundancy Analysis/Token Tagging/src_java`
 
 ### Performing experiments
-Run `run_neurox.py` in folder `./Reundancy Analysis/Token Tagging/` with the param `extract=False` if you have already
+Run `run_neurox.py` in folder `./Redundancy Analysis/Token Tagging/` with the param `extract=False` if you have already
 had the activation files. If not, make `extract=True`
 
 You may want to save the output to a log file for future analysis.
@@ -72,11 +72,16 @@ based on the top words of neurons.
 
 ### Get the activated words of neurons:
 After examining the top words, you have the indices and the words, then run the script 
-`./Reundancy Analysis/Token Tagging/TracingConcept.py` with the token and neuron indices.
+`./Redundancy Analysis/Token Tagging/TracingConcept.py` with the token and neuron indices.
 
-### CKA
-For all the tasks, run `./Reundancy Analysis/Token Tagging/CKA/cka.py`
+### Centered Kernel Alignemnt (CKA)
+For running CKA for all the tasks, run `./Redundancy Analysis/Token Tagging/CKA/cka.py`
 
 
 ## Part 3: CodeConceptNet Dataset (RQ4)
+
+`cd CodeConceptNet`
+Follow instructions for step 1 Get Concept Clusters at https://github.com/hsajjad/ConceptX
+After the clustering output file is generated in the format Word|||WordID|||SentID|||TokenID|||ClusterID
+
 
