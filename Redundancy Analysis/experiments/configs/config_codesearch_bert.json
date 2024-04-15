@@ -1,5 +1,5 @@
 {
-    "base_dir": "/work/LAS/jannesar-lab/arushi/Interpretability/interpretability-of-source-code-transformers/NL-Code-Search/NL-code-search-WebQuery/data",
+    "base_dir": "$ROOTDIR/interpretability-of-source-code-transformers/NL-Code-Search/NL-code-search-WebQuery/data",
     "train_source": "train.word",
     "train_labels": "train.label",
     "train_activations": "activations/bert/train_activations.json",  
