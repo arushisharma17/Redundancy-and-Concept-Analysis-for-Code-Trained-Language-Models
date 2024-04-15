@@ -1,12 +1,23 @@
 
-To run finetuning or extraction sbatch extraction1.sh <dataset-train,dev,test> <task-extract,finetune> <mode> e.g. sbatch extraction1.sh train extract GraphCodeBERT. All model settings are provided in the script.
+## Running Scripts
+
+To run fine-tuning or extraction processes, use the following command:
+`sbatch extraction1.sh <dataset-train,dev,test> <task-extract,finetune> <mode>`
+Example: `sbatch extraction1.sh train extract GraphCodeBERT`. 
+
+
+All model settings are provided within the script.
+
+## Setting Up Model Directories
+
+First, create a base directory for saved models and then create individual directories for each model:
 
 mkdir saved\_models
 cd saved\_models
-mkdir CodeBERT GraphCodeBERT ....(Directory for every model)
+mkdir CodeBERT GraphCodeBERT UniXCoder RoBERTa BERT CodeGPT-java CodeGPT-python 
 
 
-###Details of models and tokenizers
+### Details of models and tokenizers
 1. CodeBERT
           MODEL="microsoft/codebert-base"
           MODEL_TYPE="roberta"
@@ -18,13 +29,6 @@ mkdir CodeBERT GraphCodeBERT ....(Directory for every model)
           MODEL="microsoft/graphcodebert-base"
           MODEL_TYPE="roberta"
           OUTPUT_DIR="./saved_models/GraphCodeBERT"
-          TOKENIZER=$MODEL
-
-3. CodeBERTa"
-
-          MODEL="huggingface/CodeBERTa-small-v1"
-          MODEL_TYPE="roberta"
-          OUTPUT_DIR="./saved_models/CodeBERTa"
           TOKENIZER=$MODEL
 
 4. UniXCoder
@@ -48,20 +52,6 @@ mkdir CodeBERT GraphCodeBERT ....(Directory for every model)
           OUTPUT_DIR="./saved_models/BERT"
           TOKENIZER=$MODEL
 
-7. JavaBERT
-
-          MODEL="CAUKiel/JavaBERT"
-          MODEL_TYPE="bert"
-          OUTPUT_DIR="./saved_models/JavaBERT"
-          TOKENIZER="bert-base_cased"
-
-8. GPT2
-
-          MODEL="gpt2"
-          MODEL_TYPE="gpt2"
-          OUTPUT_DIR="./saved_models/GPT2"
-          TOKENIZER=$MODEL #need to add padding token
-
 9. CodeGPT-java
 
           MODEL="microsoft/CodeGPT-small-java"
@@ -76,19 +66,6 @@ mkdir CodeBERT GraphCodeBERT ....(Directory for every model)
           OUTPUT_DIR="./saved_models/CodeGPT/python-original"
           TOKENIZER=$MODEL
 
-11. CodeGPT-java-adapted
-
-          MODEL="microsoft/CodeGPT-small-java-adaptedGPT2"
-          MODEL_TYPE="gpt2"
-          OUTPUT_DIR="./saved_models/CodeGPT/java-adapted"
-          TOKENIZER=$MODEL
-
-12. CodeGPT-python-adapted
-
-          MODEL="microsoft/CodeGPT-small-python-adaptedGPT2"
-          MODEL_TYPE="gpt2"
-          OUTPUT_DIR="./saved_models/CodeGPT/python-adapted"
-          TOKENIZER=$MODEL
 
 Notes:
 While finetuning gpt2 models - used tokenizer.pad_token_id to get sequence length for gpt2 and ada[ted models (the ones pretrained on text) and used model.config.pad_token_id for CodeGPT - original models for java and python. Tha token ids according to tokenizer and model are slightly different for the adapted models causing errors. like 50256, 50257
