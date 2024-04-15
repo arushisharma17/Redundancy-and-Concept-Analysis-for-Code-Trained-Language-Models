@@ -85,18 +85,21 @@ For running CKA for all the tasks, run `./Redundancy Analysis/Token Tagging/CKA/
 
 ## Part 3: CodeConceptNet Dataset (RQ4)
 
-## Accessing CodeConceptNet
-
 To begin working with the CodeConceptNet, navigate to the appropriate directory: `cd CodeCOnceptNet`
 
 
-### Step 1: Get Concept Clusters
+### Get Concept Clusters
 
 Follow the instructions provided to obtain concept clusters from ConceptX. You can find the necessary steps at the [ConceptX GitHub repository](https://github.com/hsajjad/ConceptX).
 
 ### Post-Clustering Process
 
 Once you have obtained the clustering output file, which is expected to be in the format `Word|||WordID|||SentID|||TokenID|||ClusterID`, run `gpt4labeling.py` to convert to JSON format and generate labels using GPT4. 
+
+### Annotation
+
+Change required paths at the bottom of `AnnotationToolGUI.py`. 
+
 
 
 
