@@ -24,6 +24,10 @@ Below is a summary of the dataset statistics for neuron activations, showcasing 
 
 
 ### Getting activations
+
+Create the environment: 
+`pip install -r finetuning_requirements.txt`
+
 `cd ./Redundancy Analysis`
 
 Each task directory contains the code for two steps:
@@ -33,6 +37,10 @@ Each task directory contains the code for two steps:
 cd into the task directory to get specific instructions for that task.
 
 ### Performing experiments
+
+Create the environment: 
+`pip install -r experiments_requirements.txt`
+
 There are three main helper scripts provided: 
 
 1. `experiments/classification/run_sentence_pipeline_all.py`
